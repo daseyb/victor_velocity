@@ -5,18 +5,33 @@ namespace victor.Road
 {
 	public class NumericalCurve
 	{
-		public static void IntegrateStep (ref Vector3 point)
+		public const float STEP_SIZE = 0.01f;
+		public static void IntegrateStep(ref Vector3 _position)
 		{
+			float x = _position.z;
+			float y = _position.y;
+			
+			float dy = m(x);
+			
+			float dx = 1;
+			
+			_position -= new Vector3(0, dy, dx).normalized * STEP_SIZE;		
 		}
 		
-		public static Vector3 SnapYToCurve (Vector3 point)
+		private static float m(float _x)
 		{
-			var z = point.z;
-			point.y = (z*z*z*z) / 100;
-			return point;
+			return (_x * _x * _x)/25;	
 		}
 		
+		private static float func(float _x)
+		{
+			return Mathf.Pow(_x, 4)/100;	
+		}
 		
+		public static Vector3 SnapYToCurve(Vector3 _pos)
+		{
+			return new Vector3(_pos.x, func(_pos.z), _pos.z);	
+		}
 	}
 }
 
