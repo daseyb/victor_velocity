@@ -6,20 +6,20 @@ namespace victor
 {
 	public class Root : MonoBehaviour 
 	{
-		private Mesh mesh;
+		private Mesh roadMesh;
 		private CarKey key;
 		
 		void Awake () 
 		{
-			var road = GameObject.Find ("Road");
-			mesh = road.GetComponent<MeshFilter>().mesh;
+			var road = GameObject.Find ("RoadLines");
+			roadMesh = road.GetComponent<MeshFilter>().mesh;
 			
 			key = GameObject.Find("CarKey").GetComponent<CarKey>();
 		}
 	
 		void Start () 
 		{
-			RoadMesh.BuildMesh (mesh);		
+			RoadMesh.BuildMesh (roadMesh, RoadConstants.NumRoadSegments);
 		}
 		
 		void Update () 
@@ -31,7 +31,7 @@ namespace victor
 		{
 			if (key.engineRunning) 
 			{
-				RoadMesh.UpdateMesh (mesh);
+				RoadMesh.UpdateMesh (roadMesh);
 			}
 		}
 	}
