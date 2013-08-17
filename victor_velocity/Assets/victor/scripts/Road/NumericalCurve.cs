@@ -5,12 +5,14 @@ namespace victor.Road
 {
 	public class NumericalCurve
 	{
-		public const float STEP_SIZE = 0.01f;
+		public const float STEP_SIZE = 5.75f/RoadConstants.NumIntegrationSteps;
+		
 		
 		public static void IntegrateStep(ref Vector3 _position)
 		{
 			float x = _position.z;
 			float y = _position.y;
+			
 			
 			float dy = m(x);
 			
