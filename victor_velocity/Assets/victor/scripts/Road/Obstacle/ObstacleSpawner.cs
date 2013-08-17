@@ -13,6 +13,12 @@ namespace victor.Road
 		private int stepsToNextSpawn;
 		
 		private GameObject road;
+		private CarKey key;
+		
+		void Awake ()
+		{
+			key = GameObject.Find("CarKey").GetComponent<CarKey>();
+		}
 		
 		void Start ()
 		{
@@ -22,11 +28,14 @@ namespace victor.Road
 		
 		void FixedUpdate ()
 		{
-			stepsToNextSpawn--;
+			if (key.engineRunning)
+			{
+				stepsToNextSpawn--;
 			
-			if (stepsToNextSpawn <= 0) {
-				spawn();
-				pickNextSpawnStep();
+				if (stepsToNextSpawn <= 0) {
+					spawn();
+					pickNextSpawnStep();
+				}
 			}
 		}
 		
