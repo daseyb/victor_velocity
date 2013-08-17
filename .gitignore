@@ -215,3 +215,9 @@ pip-log.txt
 .mr.developer.cfg
 
 /victor_velocity/Library
+/victor_velocity/Assembly-CSharp.csproj
+/victor_velocity/Assembly-CSharp.pidb
+/victor_velocity/Assembly-CSharp-vs.csproj
+/victor_velocity/victor_velocity.sln
+/victor_velocity/victor_velocity.userprefs
+/victor_velocity/victor_velocity-csharp.sln
