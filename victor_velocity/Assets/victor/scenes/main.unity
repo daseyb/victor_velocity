@@ -632,6 +632,77 @@ Transform:
   m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children: []
   m_Father: {fileID: 1834820339}
+--- !u!1 &681390322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 681390326}
+  - 33: {fileID: 681390325}
+  - 23: {fileID: 681390323}
+  - 114: {fileID: 681390327}
+  m_Layer: 9
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &681390323
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681390322}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a70608e854314b04c80cded1e3204c35, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!33 &681390325
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681390322}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &681390326
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681390322}
+  m_LocalRotation: {x: .40833047, y: 0, z: 0, w: .912834167}
+  m_LocalPosition: {x: -9.90964699, y: 1.66785932, z: -2.14980793}
+  m_LocalScale: {x: 8.59000015, y: 5.93999958, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1834820339}
+--- !u!114 &681390327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681390322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09e830d24aa59a4db1b262919ad559a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gearTextures:
+  - {fileID: 2800000, guid: 86503db7389af434e9087d120201245f, type: 3}
+  - {fileID: 2800000, guid: 51c49ac61f7c9af45a6797d9bd8b913a, type: 3}
+  - {fileID: 2800000, guid: ddc333d50e2c5a34a9494a715963581d, type: 3}
+  - {fileID: 2800000, guid: 8b2a692cbc9d2794bb3f580491c8a53d, type: 3}
+  - {fileID: 2800000, guid: 85e62fa597049b44cbbae54ddf6fac85, type: 3}
 --- !u!1 &769035926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1374,7 @@ Transform:
   - {fileID: 769035927}
   - {fileID: 35335757}
   - {fileID: 580255017}
+  - {fileID: 681390326}
   m_Father: {fileID: 179014939}
 --- !u!1 &1862908064
 GameObject:
