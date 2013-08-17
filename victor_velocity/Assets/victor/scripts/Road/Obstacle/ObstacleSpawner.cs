@@ -7,30 +7,32 @@ namespace victor.Road
 		public GameObject prefab;
 		public int lane;
 		
-		public float minSecBetweenSpawns = 0.5f;
-		public float maxSecBetweenSpawns = 5.0f;
+		public int minStepsBetweenSpawns = 1000;
+		public int maxStepsBetweenSpawns = 10000;
 		
-		private float nextSpawnTime;
+		private int stepsToNextSpawn;
 		
 		private GameObject road;
 		
 		void Start ()
 		{
-			pickNextSpawnTime();
+			pickNextSpawnStep();
 			road = GameObject.Find("Road");
 		}
 		
-		void Update ()
+		void FixedUpdate ()
 		{
-			if (Time.time > nextSpawnTime) {
+			stepsToNextSpawn--;
+			
+			if (stepsToNextSpawn <= 0) {
 				spawn();
-				pickNextSpawnTime();
+				pickNextSpawnStep();
 			}
 		}
 		
-		private void pickNextSpawnTime()
+		private void pickNextSpawnStep()
 		{
-			nextSpawnTime = Time.time + Random.Range (minSecBetweenSpawns, maxSecBetweenSpawns);
+			stepsToNextSpawn = Random.Range (minStepsBetweenSpawns, maxStepsBetweenSpawns);
 		}
 		
 		private void spawn()
