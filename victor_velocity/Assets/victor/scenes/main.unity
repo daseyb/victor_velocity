@@ -201,7 +201,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1765472790}
   m_Father: {fileID: 1494647310}
 --- !u!33 &295647796
 MeshFilter:
@@ -348,6 +349,48 @@ Prefab:
   m_RootGameObject: {fileID: 1563885065}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &503649265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 503649266}
+  - 114: {fileID: 503649267}
+  m_Layer: 0
+  m_Name: TreesLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503649266
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 503649265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1765472790}
+--- !u!114 &503649267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 503649265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6e41b482d27b40a4c87a1130222b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: d40b9f45075360744b37b1202b48b83a, type: 2}
+  lane: 0
+  minSecBetweenSpawns: .5
+  maxSecBetweenSpawns: 5
 --- !u!1 &537507418
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +591,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxAngle: 1.5
+--- !u!1 &1080516421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1080516422}
+  - 114: {fileID: 1080516423}
+  m_Layer: 0
+  m_Name: CarsRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080516422
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080516421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1765472790}
+--- !u!114 &1080516423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080516421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6e41b482d27b40a4c87a1130222b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: 2f567efaeebbf5747b858366a4ae4165, type: 2}
+  lane: 2
+  minSecBetweenSpawns: .5
+  maxSecBetweenSpawns: 5
 --- !u!1001 &1088818887
 Prefab:
   m_ObjectHideFlags: 0
@@ -609,6 +694,48 @@ Prefab:
   m_RootGameObject: {fileID: 1521380084}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1209238275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1209238276}
+  - 114: {fileID: 1209238277}
+  m_Layer: 0
+  m_Name: CarsLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1209238276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209238275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1765472790}
+--- !u!114 &1209238277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209238275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6e41b482d27b40a4c87a1130222b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: 2f567efaeebbf5747b858366a4ae4165, type: 2}
+  lane: 1
+  minSecBetweenSpawns: .5
+  maxSecBetweenSpawns: 5
 --- !u!1 &1310893165
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +885,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1088818887}
   m_GameObject: {fileID: 1521380084}
   m_Mesh: {fileID: 4300006, guid: d730288bf468e434f84cdb62028a51ce, type: 3}
+--- !u!1 &1561144485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1561144486}
+  - 114: {fileID: 1561144487}
+  m_Layer: 0
+  m_Name: TreesRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1561144486
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561144485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1765472790}
+--- !u!114 &1561144487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561144485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6e41b482d27b40a4c87a1130222b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: d40b9f45075360744b37b1202b48b83a, type: 2}
+  lane: 3
+  minSecBetweenSpawns: .5
+  maxSecBetweenSpawns: 5
 --- !u!1 &1563885065
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +1051,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1900275754}
+--- !u!1 &1765472789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1765472790}
+  m_Layer: 0
+  m_Name: ObstacleSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765472790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765472789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.9606819, y: 13.3616114, z: -31.4359207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1209238276}
+  - {fileID: 503649266}
+  - {fileID: 1561144486}
+  - {fileID: 1080516422}
+  m_Father: {fileID: 295647795}
 --- !u!1 &1834820338
 GameObject:
   m_ObjectHideFlags: 0

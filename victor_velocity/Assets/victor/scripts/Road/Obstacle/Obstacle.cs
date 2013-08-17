@@ -7,7 +7,7 @@ namespace victor.Road
 		
 		public int lane = 2;
 		public int step = 0;
-	
+		
 		void Start () 
 		{
 			var pos = transform.position;
@@ -18,9 +18,7 @@ namespace victor.Road
 		
 		void FixedUpdate () 
 		{
-			var pos = transform.position;
-			NumericalCurve.IntegrateStep (ref pos);
-			transform.position = pos;
+			NumericalCurve.IntegrateStep (gameObject);
 			
 			step++;
 			

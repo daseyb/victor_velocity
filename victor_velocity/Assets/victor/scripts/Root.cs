@@ -10,13 +10,12 @@ namespace victor
 		
 		void Awake () 
 		{
+			var road = GameObject.Find ("Road");
+			mesh = road.GetComponent<MeshFilter>().mesh;
 		}
 	
 		void Start () 
 		{
-			var road = GameObject.Find ("Road");
-			
-			mesh = road.GetComponent<MeshFilter>().mesh;
 			RoadMesh.BuildMesh (mesh);		
 		}
 		
