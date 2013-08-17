@@ -5,7 +5,7 @@ namespace victor.car
 {	
 	public class Car : MonoBehaviour 
 	{
-		public float MaxSteering = 1f;
+		public float MaxSteering = 0.9f;
 	
 		void Update () 
 		{
