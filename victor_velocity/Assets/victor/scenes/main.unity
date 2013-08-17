@@ -439,8 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: d40b9f45075360744b37b1202b48b83a, type: 2}
   lane: 0
-  minSecBetweenSpawns: .5
-  maxSecBetweenSpawns: 5
+  minStepsBetweenSpawns: 3000
+  maxStepsBetweenSpawns: 30000
 --- !u!1 &537507418
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,8 +740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: 2f567efaeebbf5747b858366a4ae4165, type: 2}
   lane: 2
-  minSecBetweenSpawns: 2
-  maxSecBetweenSpawns: 10
+  minStepsBetweenSpawns: 5000
+  maxStepsBetweenSpawns: 50000
 --- !u!1001 &1088818887
 Prefab:
   m_ObjectHideFlags: 0
@@ -847,8 +847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: 2f567efaeebbf5747b858366a4ae4165, type: 2}
   lane: 1
-  minSecBetweenSpawns: 2
-  maxSecBetweenSpawns: 10
+  minStepsBetweenSpawns: 5000
+  maxStepsBetweenSpawns: 50000
 --- !u!1 &1310893165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,8 +1038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: d40b9f45075360744b37b1202b48b83a, type: 2}
   lane: 3
-  minSecBetweenSpawns: .5
-  maxSecBetweenSpawns: 5
+  minStepsBetweenSpawns: 3000
+  maxStepsBetweenSpawns: 30000
 --- !u!1 &1563885065
 GameObject:
   m_ObjectHideFlags: 0
