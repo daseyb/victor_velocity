@@ -6,6 +6,12 @@ namespace victor
 {
 	public class Root : MonoBehaviour 
 	{
-
+		void Update ()
+		{
+			if (Input.GetButtonDown("Quit"))
+			{
+				Application.Quit();
+			}
+		}
 	}
 }
