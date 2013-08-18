@@ -30,7 +30,7 @@ namespace victor.Road.mesh
 			{
 				var ofs = (float)numSegments / (float)RoadConstants.NumIntegrationSteps;
 				ofs *= step;
-				ofs -= Mathf.Floor(ofs);
+				//ofs -= Mathf.Floor(ofs);
 				
 				renderer.material.SetFloat ("_Offset", -ofs);
 				
@@ -105,7 +105,7 @@ namespace victor.Road.mesh
 			
 			Vector2[] uvs = new Vector2 [numVertices];
 			
-			for (var i = 0; i < numSegments; ++i) 
+			for (var i = 0; i < numSegments + 1; ++i) 
 			{
 				uvs[2*i] = new Vector2(0, (float)i);
 				uvs[2*i+1] = new Vector2(1, (float)i);
