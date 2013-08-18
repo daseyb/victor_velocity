@@ -18,7 +18,7 @@ namespace victor.Road
 		void Start () 
 		{
 			var pos = transform.position;
-			pos.x = ((float)(lane) - 1.5f) * 0.5f; 
+			pos.x = ((float)(lane) - 1.5f) * 1.0f; 
 			pos.z = RoadConstants.MaxRoadZ;
 			transform.position = NumericalCurve.SnapYToCurve (pos);
 		}

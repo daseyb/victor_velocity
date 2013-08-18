@@ -78,11 +78,15 @@ namespace victor.Road
 			return uvs;
 		}
 		
-		public static void UpdateMesh (Mesh mesh)
+		public static void Update (int step, GameObject obj, int numSegments)
 		{
-			// step every vertex
+			var ofs = (float)numSegments / (float)RoadConstants.NumIntegrationSteps;
+			ofs *= step;
+			ofs -= Mathf.Floor(ofs);
 			
-			// if vertex leaves valid area, remove it and add a new one at the top
+			for (var i=0; i < obj.renderer.materials.Length; ++i) {
+				obj.renderer.materials[i].SetFloat ("_Offset", -ofs);
+			}
 		}
 	}
 }

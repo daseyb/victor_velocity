@@ -9,7 +9,7 @@ namespace victor.Road
 		public const float MinRoadZ = 0f;
 		public const float MaxRoadZ = 4f;
 		
-		public const int NumRoadSegments = 10;
+		public const int NumRoadSegments = 4;
 		public const int NumStepsPerMeshGrid = NumIntegrationSteps / NumRoadSegments;
 	}
 }
