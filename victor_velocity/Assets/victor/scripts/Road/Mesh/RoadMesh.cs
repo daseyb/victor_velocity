@@ -2,18 +2,54 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace victor.Road
+namespace victor.Road.mesh
 {
-	public class RoadMesh
+	public class RoadMesh : MonoBehaviour
 	{
-		public static void BuildMesh (Mesh mesh, int numSegments)
+		public int numSegments = 6;
+		
+		private Mesh mesh;
+		private CarKey key;
+		private int step;
+		
+		void Awake () 
 		{
-			mesh.vertices = buildVertices (numSegments);
-			mesh.triangles = buildTriangles (numSegments);
-			mesh.uv = buildUVs (numSegments);
+			mesh = GetComponent<MeshFilter>().mesh;
+			key = GameObject.Find("CarKey").GetComponent<CarKey>();
+			step = 0;
+		}
+	
+		void Start () 
+		{			
+			BuildMesh();
 		}
 		
-		private static Vector3[] buildVertices (int numSegments)
+		void FixedUpdate ()
+		{
+			if (key.engineRunning) 
+			{
+				var ofs = (float)numSegments / (float)RoadConstants.NumIntegrationSteps;
+				ofs *= step;
+				ofs -= Mathf.Floor(ofs);
+				
+				renderer.material.SetFloat ("_Offset", -ofs);
+				
+				step += 1;
+				
+				if (step > RoadConstants.NumIntegrationSteps) {
+					step -= RoadConstants.NumIntegrationSteps;
+				}
+			}
+		}		
+		
+		private void BuildMesh ()
+		{
+			mesh.vertices = buildVertices();
+			mesh.triangles = buildTriangles();
+			mesh.uv = buildUVs();
+		}
+		
+		private Vector3[] buildVertices ()
 		{
 			var numVertices = (numSegments+1) * 2;
 			
@@ -41,7 +77,7 @@ namespace victor.Road
 			return vertices;
 		}
 		
-		private static int[] buildTriangles (int numSegments)
+		private int[] buildTriangles ()
 		{
 			// two triangles per segment
 			int[] indices = new int[numSegments * 2 * 3];
@@ -63,7 +99,7 @@ namespace victor.Road
 			return indices;
 		}
 		
-		private static Vector2[] buildUVs (int numSegments)
+		private Vector2[] buildUVs ()
 		{
 			int numVertices = (numSegments + 1) * 2; 
 			
@@ -76,18 +112,7 @@ namespace victor.Road
 			}
 			
 			return uvs;
-		}
-		
-		public static void Update (int step, GameObject obj, int numSegments)
-		{
-			var ofs = (float)numSegments / (float)RoadConstants.NumIntegrationSteps;
-			ofs *= step;
-			ofs -= Mathf.Floor(ofs);
-			
-			for (var i=0; i < obj.renderer.materials.Length; ++i) {
-				obj.renderer.materials[i].SetFloat ("_Offset", -ofs);
-			}
-		}
+		}		
 	}
 }
 
